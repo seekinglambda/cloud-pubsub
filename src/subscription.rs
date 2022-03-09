@@ -70,7 +70,7 @@ impl Subscription {
             .parse()
             .unwrap();
 
-        let json = format!("{{\"maxMessages:\": {}}}", max_messages);
+        let json = format!("{{\"maxMessages\": {}}}", max_messages);
 
         let mut req = client.request(Method::POST, json);
         *req.uri_mut() = uri.clone();
